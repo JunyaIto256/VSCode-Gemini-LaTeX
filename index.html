@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VSCode + Gemini &amp; LaTeX 環境構築ガイド</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+      background: #f0f2f5;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #1a237e;
+      color: white;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      line-height: 1.4;
+    }
+
+    header p {
+      font-size: 0.85rem;
+      color: #b0bec5;
+      margin-top: 2px;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: white;
+      color: #1a237e;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+
+    .download-btn:hover {
+      background: #e8eaf6;
+    }
+
+    .pdf-container {
+      flex: 1;
+      padding: 16px;
+      display: flex;
+      justify-content: center;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 960px;
+      height: calc(100vh - 120px);
+      min-height: 600px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+      background: white;
+    }
+
+    .fallback {
+      display: none;
+      text-align: center;
+      padding: 40px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      max-width: 960px;
+      width: 100%;
+    }
+
+    .fallback p {
+      margin-bottom: 16px;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 0.8rem;
+      color: #888;
+      background: #f0f2f5;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1rem;
+      }
+      iframe {
+        height: calc(100vh - 140px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>VSCode + Gemini &amp; LaTeX 環境構築ガイド</h1>
+      <p>AI を活用した学習・研究環境の構築（2026年度版）</p>
+    </div>
+    <a class="download-btn" href="vscode_gemini_latex_guide.pdf" download>
+      &#11123; PDFをダウンロード
+    </a>
+  </header>
+
+  <div class="pdf-container">
+    <iframe
+      src="vscode_gemini_latex_guide.pdf"
+      title="VSCode + Gemini &amp; LaTeX 環境構築ガイド"
+      onerror="document.querySelector('.fallback').style.display='block'; this.style.display='none';"
+    >
+      <div class="fallback">
+        <p>PDFの表示に対応していないブラウザです。</p>
+        <a class="download-btn" href="vscode_gemini_latex_guide.pdf" download>
+          &#11123; PDFをダウンロードして開く
+        </a>
+      </div>
+    </iframe>
+  </div>
+
+  <footer>
+    <p>埼玉大学 力学I TA資料</p>
+  </footer>
+
+</body>
+</html>
