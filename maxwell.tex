@@ -1,0 +1,117 @@
+% マクスウェル方程式 --- LuaLaTeX でコンパイル
+\documentclass[lualatex, a4paper, 12pt]{jlreq}
+
+% 数学パッケージ
+\usepackage{amsmath}    % 高度な数式環境
+\usepackage{amssymb}    % 数学記号
+\usepackage{bm}         % 太字ベクトル \bm{...}
+
+% ページ設定（オプション）
+\usepackage{geometry}
+\geometry{top=25mm, bottom=25mm, left=25mm, right=25mm}
+
+\title{マクスウェル方程式}
+\author{電磁気学}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{概要}
+
+電磁気学はマクスウェル方程式と呼ばれる4つの方程式によって
+完全に記述される．
+電場 $\bm{E}$，磁場 $\bm{B}$，電荷密度 $\rho$，
+電流密度 $\bm{J}$ を用いて表される．
+
+\section{積分形}
+
+\begin{align}
+  \oint_S \bm{E} \cdot d\bm{A}
+    &= \frac{Q}{\varepsilon_0}
+    \tag{ガウスの法則}
+    \label{eq:gauss_e}
+    \\[8pt]
+  \oint_S \bm{B} \cdot d\bm{A}
+    &= 0
+    \tag{磁気のガウスの法則}
+    \label{eq:gauss_b}
+    \\[8pt]
+  \oint_C \bm{E} \cdot d\bm{l}
+    &= -\frac{d}{dt} \int_S \bm{B} \cdot d\bm{A}
+    \tag{ファラデーの法則}
+    \label{eq:faraday}
+    \\[8pt]
+  \oint_C \bm{B} \cdot d\bm{l}
+    &= \mu_0 \int_S \bm{J} \cdot d\bm{A}
+       + \mu_0 \varepsilon_0 \frac{d}{dt}
+         \int_S \bm{E} \cdot d\bm{A}
+    \tag{アンペール--マクスウェルの法則}
+    \label{eq:ampere}
+\end{align}
+
+\section{微分形}
+
+ガウスの定理とストークスの定理を用いると，
+積分形から微分形が導かれる．
+
+\begin{align}
+  \nabla \cdot \bm{E}
+    &= \frac{\rho}{\varepsilon_0}
+    \tag{ガウスの法則}
+    \label{eq:gauss_e_diff}
+    \\[8pt]
+  \nabla \cdot \bm{B}
+    &= 0
+    \tag{磁気のガウスの法則}
+    \label{eq:gauss_b_diff}
+    \\[8pt]
+  \nabla \times \bm{E}
+    &= -\frac{\partial \bm{B}}{\partial t}
+    \tag{ファラデーの法則}
+    \label{eq:faraday_diff}
+    \\[8pt]
+  \nabla \times \bm{B}
+    &= \mu_0 \bm{J}
+       + \mu_0 \varepsilon_0 \frac{\partial \bm{E}}{\partial t}
+    \tag{アンペール--マクスウェルの法則}
+    \label{eq:ampere_diff}
+\end{align}
+
+\section{物理定数}
+
+\begin{table}[h]
+  \centering
+  \caption{電磁気学の基本定数}
+  \begin{tabular}{cll}
+    \hline
+    記号 & 名称 & 値 \\
+    \hline
+    $\varepsilon_0$ & 真空の誘電率 &
+      $8.854 \times 10^{-12}\ \mathrm{F/m}$ \\
+    $\mu_0$ & 真空の透磁率 &
+      $4\pi \times 10^{-7}\ \mathrm{H/m}$ \\
+    $c$ & 真空中の光速 &
+      $c = 1/\sqrt{\mu_0 \varepsilon_0}
+       \approx 3.0 \times 10^8\ \mathrm{m/s}$ \\
+    \hline
+  \end{tabular}
+  \label{tab:constants}
+\end{table}
+
+\section{電磁波}
+
+マクスウェル方程式から，電場と磁場が波として伝播すること
+（電磁波）が導かれる．電場の波動方程式：
+
+\begin{equation}
+  \nabla^2 \bm{E}
+  - \mu_0 \varepsilon_0 \frac{\partial^2 \bm{E}}{\partial t^2}
+  = \bm{0}
+\end{equation}
+
+この波の速度は $c = 1/\sqrt{\mu_0\varepsilon_0}$ であり，
+光速と一致する．これがマクスウェルによる
+「光は電磁波である」という発見である．
+
+\end{document}
