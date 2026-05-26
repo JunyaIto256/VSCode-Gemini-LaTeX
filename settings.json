@@ -1,0 +1,39 @@
+{
+  // === LaTeX Workshop 設定 ===
+
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ],
+      "env": {}
+    }
+  ],
+
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk",
+      "tools": ["latexmk"]
+    }
+  ],
+
+  "latex-workshop.view.pdf.viewer": "tab",
+
+  "latex-workshop.latex.autoBuild.run": "onSave",
+
+  "latex-workshop.synctex.afterBuild.enabled": true,
+
+  "latex-workshop.latex.autoClean.run": "onFailed",
+
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux", "*.bbl", "*.blg", "*.idx", "*.ind",
+    "*.lof", "*.lot", "*.out", "*.toc",
+    "*.fls", "*.log", "*.fdb_latexmk",
+    "*.snm", "*.nav", "*.dvi", "*.synctex.gz"
+  ]
+}
