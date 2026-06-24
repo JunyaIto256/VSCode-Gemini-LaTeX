@@ -1178,7 +1178,7 @@ LaTeX で数式を書く際によく使う記法をまとめる．
   [`\forall`],  [$forall$],    [`\exists`],  [$exists$],   [`\emptyset`], [$emptyset$],
   [`\sum`],     [$sum$],       [`\prod`],    [$product$],  [`\int`],     [$integral$],
   [`\oint`],    [$integral.cont$], [`\iint`],[$integral.double$],[`\iiint`],[$integral.triple$],
-  [`\hbar`],    [$planck.reduce$],  [`\ell`],[$ell$],      [`\Re`],      [$Re$],
+  [`\hbar`],    [$planck$],  [`\ell`],[$ell$],      [`\Re`],      [$Re$],
   [`\Im`],      [$Im$],        [`\dagger`],  [$dagger$],   [`\star`],    [$star$],
 )
 
