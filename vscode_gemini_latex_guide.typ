@@ -21,7 +21,7 @@
 
 #set text(
   lang: "ja",
-  font: ("Hiragino Mincho ProN", "Yu Mincho", "MS Mincho", "Arial Unicode MS", "Times"),
+  font: ("Yu Mincho", "MS Mincho"),
   size: 11pt,
 )
 
@@ -1082,7 +1082,7 @@ LaTeX で数式を書く際によく使う記法をまとめる．
 === 複数文字・幅広アクセント
 
 #table(
-  columns: (auto, auto, 1fr),
+  columns: (auto, auto, auto),
   align: (left, center, left),
   stroke: (x: none, y: rgb("#e0e0e0")),
   fill: (_, y) => if y == 0 { rgb("#e8eaf6") } else { none },
@@ -1091,8 +1091,8 @@ LaTeX で数式を書く際によく使う記法をまとめる．
   [`\widetilde{ABC}`], [$tilde(A B C)$],    [コンテンツ幅に合わせたチルダ],
   [`\overline{ABC}`],  [$overline(A B C)$], [コンテンツ全体に上線],
   [`\underline{ABC}`], [$underline(A B C)$],[コンテンツ全体に下線],
-  [`\overbrace{A+B}^{n}`],  [$overbrace(A + B, n)$],  [上ブレース＋ラベル],
-  [`\underbrace{A+B}_{n}`], [$underbrace(A + B, n)$], [下ブレース＋ラベル],
+  [`\overbrace{A+B}`],  [$overbrace(A + B)$],  [上ブレース],
+  [`\underbrace{A+B}`], [$underbrace(A + B)$], [下ブレース],
 )
 
 == ギリシャ文字
